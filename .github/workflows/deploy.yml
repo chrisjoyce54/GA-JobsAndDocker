@@ -15,7 +15,7 @@ jobs:
       image:  node:16
     env:
       MONGODB_CONNECTION_PROTOCOL: mongodb #connection protocol is from docker documentation.  mongodb+srv
-      MONGODB_CLUSTER_ADDRESS: mongdb     #matches label of services Line 23 cluster0.4u7hjvy.mongodb.net
+      MONGODB_CLUSTER_ADDRESS: mongdb     #matches label of services Line 23 cluster0.4u7hjvy.mongodb.net If the job is not running on a container then cluster address = 127.0.0.1
       MONGODB_USERNAME: root              #${{secrets.DB_USERNAME}}
       MONGODB_PASSWORD: example           # ${{secrets.PASSWORD}}
       PORT: 8080
